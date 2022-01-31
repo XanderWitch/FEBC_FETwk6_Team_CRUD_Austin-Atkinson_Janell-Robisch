@@ -1,0 +1,33 @@
+{
+  "name": "febc_fetwk6_team_crud_austin-atkinson_janell-robisch",
+  "version": "1.0.0",
+  "description": "Team Goal Tracker CRUD App",
+  "main": "project.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XanderWitch/FEBC_FETwk6_Team_CRUD_Austin-Atkinson_Janell-Robisch.git"
+  },
+  "keywords": [
+    "CRUD",
+    "goal",
+    "tracker",
+    "JavaScript",
+    "Bootstrap",
+    "JQuery",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Janell Robisch and Austin Atkinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XanderWitch/FEBC_FETwk6_Team_CRUD_Austin-Atkinson_Janell-Robisch/issues"
+  },
+  "homepage": "https://github.com/XanderWitch/FEBC_FETwk6_Team_CRUD_Austin-Atkinson_Janell-Robisch#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  }
+}
