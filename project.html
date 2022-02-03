@@ -10,15 +10,25 @@
 			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="style.css" />
 		<!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"> -->
 		<title>Goal Tracker</title>
 	</head>
-	<body class="container">
-		<div id="new-month" class="jumbotron">
-			<h2 class="h2">New Month</h2>
+	<body class="container gradient-background">
+		<div class="hero-image" id="box">
+			<div class="hero-text">
+				<h1 class="text-center">Goal Tracker 2022</h1>
+			</div>
+		</div>
+
+		<div id="new-month box" class="jumbotron mt-4 text-primary">
+			<h2 class="h2 align-baseline">New Month</h2>
 			<input type="text" id="new-month-name" class="form-control" /><br />
-			<button id="create-new-month" class="btn btn-primary form-control">
-				Create
+			<button
+				id="create-new-month"
+				class="btn btn-primary form-control align-baseline"
+			>
+				Create New Month
 			</button>
 		</div>
 

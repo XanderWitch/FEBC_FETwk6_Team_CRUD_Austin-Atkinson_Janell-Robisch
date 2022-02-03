@@ -27,7 +27,7 @@ class Goal {
 
 
 class GoalTrackingService {
-    static url = 'https://crudcrud.com/api/5f069397c722405b9daaf7c93056a165/months';
+    static url = 'https://crudcrud.com/api/a2c34084903d4221b997d6d9876649f2/months';
 
     static getAllMonthlyGoals() {
         return $.get(this.url);
@@ -82,8 +82,14 @@ class DOMManager {
                 `
                     <div id="${month.guid}" class="card">
                         <div class="card-header">
-                            <h2 class="h2">${month.name}</h2>
-                            <button class="btn btn-danger mt-2" onclick="DOMManager.deleteMonth('${month._id}')">Delete</button>
+                            <div class="row align-items-start">
+                               <div class="col-sm">
+                                    <h2 class="h2 text-primary">${month.name}</h2>
+                                </div>
+                                <div class="col-sm">
+                                 <button class="btn btn-danger mt-2" onclick="DOMManager.deleteMonth('${month._id}')">Delete Month</button>
+                               </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div>
@@ -105,9 +111,13 @@ class DOMManager {
                                 </div>
                                 <button id="${month.guid}-new-goal" onclick="DOMManager.addGoal('${month.guid}')" class="btn btn-primary form-control mt-3">Add New Goal</button>
                             </div>
+                            <hr class="mt-3">
                         </div>
+
                     </div>
+                    
                 `
+
             );
 
             //Show each goal in the month
@@ -115,16 +125,26 @@ class DOMManager {
 
                 //grab id of the month and card body and append each goal
                 $(`#${month.guid}`).find('.card-body').append(
-                    `<p>
-                        <span id="added-date-${goal.guid}"><strong>Date Added</strong> ${goal.addedDate}</span>
-                        
-                        <span id="description-${goal.guid}"><strong>Description</strong> ${goal.description}</span>
-                        
-                        <span id="deadline-${goal.guid}"><strong>Deadline</strong> ${goal.deadline}</span>
+                    `<div class="container mt-3">
+                        <div class="row align-items-start align-baseline">
+                            <div class="col">
+                                <span id="added-date-${goal.guid}"><strong>Date Added:</strong> ${goal.addedDate}</span>
+                            </div>
 
-                        <!--Button to Delete a Single Goal-->
-                            <button class="btn btn-danger mt-2" onclick="DOMManager.deleteGoal('${month.guid}', '${goal.guid}')">Delete Goal</button>
-                    </p>`
+                            <div class="col">
+                                <span id="description-${goal.guid}"><strong>Description:</strong> ${goal.description}</span>
+                            </div>
+
+                            <div class="col">
+                                <span id="deadline-${goal.guid}"><strong>Deadline:</strong> ${goal.deadline}</span>
+                            </div>
+                            <div class="col">
+                                <!--Button to Delete a Single Goal-->
+                                <button class="btn btn-danger mt-2 vmiddle" onclick="DOMManager.deleteGoal('${month.guid}', '${goal.guid}')">Delete Goal</button>
+                            </div>
+                        </div>
+                        <hr class="divider">
+                    </div>`
                 )
 
                 //ToDo: add every goal for the month. with a delete button. If we have time add Edit, Update, Cancele button
