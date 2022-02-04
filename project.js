@@ -27,7 +27,7 @@ class Goal {
 
 
 class GoalTrackingService {
-    static url = 'https://crudcrud.com/api/a2c34084903d4221b997d6d9876649f2/months';
+    static url = 'https://crudcrud.com/api/48aa744697374eb49dd4bb6aa9efde4f/months';
 
     static getAllMonthlyGoals() {
         return $.get(this.url);
@@ -80,7 +80,7 @@ class DOMManager {
         for (const month of months) {
             $('#monthly-goals').prepend(
                 `
-                    <div id="${month.guid}" class="card">
+                    <div id="${month.guid}" class="card mt-5">
                         <div class="card-header">
                             <div class="row align-items-start">
                                <div class="col-sm">
@@ -113,7 +113,6 @@ class DOMManager {
                             </div>
                             <hr class="mt-3">
                         </div>
-
                     </div>
                     
                 `
